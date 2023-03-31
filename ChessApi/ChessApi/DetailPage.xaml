@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="ChessApi.DetailPage"
+             Title="Profile Details"
+             BackgroundColor="#312e2b">
+
+    <ContentPage Title="Profile">
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center" Spacing="10" Padding="0,30,0,20">
+
+            <!--User Info-->
+            <controls:CircleImage x:Name="avatarImage" WidthRequest="170" HeightRequest="170"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,-15">
+                <Label x:Name="usernameLabel" FontSize="32" FontAttributes="Bold" TextColor="White"/>
+                <Image x:Name="leagueImage" WidthRequest="50" HeightRequest="50"/>
+            </StackLayout>
+            <Label x:Name="JoinDate" TextColor="White" FontSize="16" HorizontalTextAlignment="Center"/>
+            <Label x:Name="StatsLabel" TextColor="Orange" FontSize="32" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+            <!--Bullet Rating-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,-8">
+                <Image x:Name="bulletImage" WidthRequest="25" HeightRequest="25"/>
+                <Label x:Name="bulletRating" TextColor="White" FontSize="18" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="bulletWins" TextColor="White" FontSize="16"/>
+                <Label x:Name="bulletLoss" TextColor="White" FontSize="16"/>
+                <Label x:Name="bulletDraw" TextColor="White" FontSize="16"/>
+                <Label x:Name="bulletWinrateLabel" TextColor="White" FontSize="16" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <ActivityIndicator x:Name="activityIndicator" Color="White"/>
+            
+            <!--Blitz Rating-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,-8">
+                <Image x:Name="blitzImage" WidthRequest="25" HeightRequest="25"/>
+                <Label x:Name="blitzRating" TextColor="White" FontSize="18" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="blitzWins" TextColor="White" FontSize="16"/>
+                <Label x:Name="blitzLoss" TextColor="White" FontSize="16"/>
+                <Label x:Name="blitzDraw" TextColor="White" FontSize="16"/>
+                <Label x:Name="blitzWinrateLabel" TextColor="White" FontSize="16" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <!--Rapid Rating-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,-8">
+                <Image x:Name="rapidImage" WidthRequest="25" HeightRequest="25"/>
+                <Label x:Name="rapidRating" TextColor="White" FontSize="18" VerticalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="rapidWins" TextColor="White" FontSize="16"/>
+                <Label x:Name="rapidLoss" TextColor="White" FontSize="16"/>
+                <Label x:Name="rapidDraw" TextColor="White" FontSize="16"/>
+                <Label x:Name="rapidWinrateLabel" TextColor="White" FontSize="16" HorizontalOptions="Center"/>
+            </StackLayout>
+            
+            <!--Puzzle Rating-->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,-8">
+                <Image x:Name="puzzleImage" WidthRequest="25" HeightRequest="25"/>
+                <Label x:Name="puzzleRating" TextColor="White" FontSize="18"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Last Games">
+        
+    </ContentPage>
+</TabbedPage>
