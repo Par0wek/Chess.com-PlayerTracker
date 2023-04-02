@@ -44,38 +44,9 @@ namespace ChessApi
             StatsLabel.Text = "Statistics";
 
             //league image
-            if (result.league == "Wood")
-            {
-                leagueImage.Source = "wood.png";
-            }
-            else if (result.league == "Stone")
-            {
-                leagueImage.Source = "stone.png";
-            }
-            else if (result.league == "Bronze")
-            {
-                leagueImage.Source = "bronze.png";
-            }
-            else if (result.league == "Silver")
-            {
-                leagueImage.Source = "silver.png";
-            }
-            else if (result.league == "Crystal")
-            {
-                leagueImage.Source = "crystal.png";
-            }
-            else if (result.league == "Elite")
-            {
-                leagueImage.Source = "elite.png";
-            }
-            else if (result.league == "Champion")
-            {
-                leagueImage.Source = "champion.png";
-            }
-            else if (result.league == "Legend")
-            {
-                leagueImage.Source = "legend.png";
-            }
+            string league = result.league;
+            league = league.ToLower();
+            leagueImage.Source = $"{league}.png";
 
             //rapid games info
             rapidRating.Text = $"Rapid: {statResult.chess_rapid.Last.rating}";
