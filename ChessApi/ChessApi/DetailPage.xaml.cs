@@ -24,6 +24,12 @@ namespace ChessApi
             var result = await App.RestApiService.GetUserProfileAsync("");
             var statResult = await App.RestApiService.GetStatsAsync("");
 
+            //Activate Boxview
+            BulletBox.IsVisible= true;
+            BlitzBox.IsVisible= true;
+            RapidBox.IsVisible= true;
+            PuzzleBox.IsVisible= true;
+
             //avatar
             usernameLabel.Text = $"{result.username}";
             if(result.avatar == null)
