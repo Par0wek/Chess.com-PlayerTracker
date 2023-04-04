@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="ChessApi.MainPage"
              BackgroundColor="#312e2b">
 
@@ -22,7 +21,7 @@
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=UserInput, Property=Height, Constant=350}">
             <Label Text="Last Searches" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-            <ListView x:Name="LastSearchesListview" ItemsSource="{Binding lastSearches}" BackgroundColor="DarkGray">
+            <ListView x:Name="LastSearchesListview" ItemsSource="{Binding lastSearches}" BackgroundColor="Gray">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding .}"/>
