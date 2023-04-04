@@ -15,15 +15,16 @@ namespace ChessApi
         public MainPage()
         {
             InitializeComponent();
+            LastSearchesListview.ItemsSource = lastSearches;
         }
 
-        public List<string> lastUsers = new List<string>();
+        public List<string> lastSearches = new List<string>();
         private static string username;
         public async void UserSearchButton(object sender, EventArgs e)
         {
             username = usernameInput.Text;
             username = username.Replace(" ", "");
-            lastUsers.Add(username);
+            lastSearches.Add(username);
 
             await Navigation.PushAsync(new DetailPage());
         }

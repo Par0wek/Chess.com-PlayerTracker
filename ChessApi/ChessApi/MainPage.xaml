@@ -11,7 +11,7 @@
                      RelativeLayout.YConstraint="{ConstraintExpression Property=Height, Type=Constant, Constant=100}">
             <Image Source="chesscomLogo.png" WidthRequest="350" HeightRequest="150"/>
         </StackLayout>
-        
+
         <StackLayout x:Name="UserInput" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center"
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width}"
                      RelativeLayout.HeightConstraint="{ConstraintExpression Property=Height}">
@@ -22,9 +22,13 @@
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=UserInput, Property=Height, Constant=350}">
             <Label Text="Last Searches" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-            <ListView x:Name="UserListView" ItemsSource="{Binding lastUsers}"/>
+            <ListView x:Name="LastSearchesListview" ItemsSource="{Binding lastSearches}" BackgroundColor="DarkGray">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding .}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </RelativeLayout>
-
-
 </ContentPage>
