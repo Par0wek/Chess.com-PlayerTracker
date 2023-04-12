@@ -21,10 +21,14 @@
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=UserInput, Property=Height, Constant=350}">
             <Label Text="Last Searches" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-            <ListView x:Name="LastSearchesListview" ItemsSource="{Binding lastSearches}">
+            <ListView x:Name="LastSearchesListview">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding .}"/>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="Center" Padding="5">
+                                <Label x:Name="uzytkownik" Text="{Binding .}" TextColor="Salmon" FontSize="22"/>
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
