@@ -25,6 +25,7 @@ namespace ChessApi
         {
             username = usernameInput.Text;
             username = username.Replace(" ", "");
+
             if(lastSearches.Contains(username))
             {
                 lastSearches.Remove(username);
@@ -34,9 +35,19 @@ namespace ChessApi
             {
             lastSearches.Insert(0, username);
             }
+
             if (lastSearches.Count >= 5){
                 lastSearches.RemoveAt(4);
             }
+
+            await Navigation.PushAsync(new DetailPage());
+        }
+
+        private async void LastSearchesListview_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            username = e.Item.ToString();
+            username = username.Replace(" ", "");
+            ((ListView)sender).SelectedItem = null;
 
             await Navigation.PushAsync(new DetailPage());
         }

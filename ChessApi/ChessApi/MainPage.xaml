@@ -21,7 +21,7 @@
                      RelativeLayout.WidthConstraint="{ConstraintExpression Property=Width}"
                      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=UserInput, Property=Height, Constant=350}">
             <Label Text="Last Searches" TextColor="White" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-            <ListView x:Name="LastSearchesListview">
+            <ListView x:Name="LastSearchesListview" ItemTapped="LastSearchesListview_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
