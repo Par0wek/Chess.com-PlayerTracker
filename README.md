@@ -1,7 +1,7 @@
 # Chess Tracker
 Moja aplikacja z pewnością spodoba się użytkownikom strony [Chess.com](https://www.chess.com/)
 
-Chess Tracker ma za zadanie wyświetlać i formatować statyski graczy pobierane z serwisu Chess.com. Została ona napisana z użyciem środowiska Xamarin Forms. W implementacji używano dwa rodzje plików: xaml oraz cs. Xaml to taki trochę html, więc jest odpowiedzialny za frontend aplikacji, natomiast cs zawiera kod napisany w jęzku c# i zajmuję się backendem czyli chociażby obliczaniem twojego winrate'u. Chess Tracker wykorzystuje RESTful API serwisu Chess.com ([link do api](https://www.chess.com/news/view/published-data-api)), które zawiera informację o:
+Chess Tracker ma za zadanie wyświetlać i formatować statyski graczy pobierane z serwisu Chess.com. Została ona napisana z użyciem środowiska Xamarin Forms. W implementacji używano dwa rodzje plików: xaml oraz cs. Xaml to taki trochę html, więc jest odpowiedzialny za frontend aplikacji, natomiast cs zawiera kod napisany w jęzku c# i zajmuję się backendem czyli chociażby obliczaniem twojego winrate'u. Chess Tracker wykorzystuje RESTful API serwisu Chess.com ([link do api](https://www.chess.com/news/view/published-data-api)), które zawiera takie dane jak:
 * Informację o graczu
 * Statystyki gracza
 * Archiwum gier gracza (planuję dodać do aplikacji listę ostanich gier)
