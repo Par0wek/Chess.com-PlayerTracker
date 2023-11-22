@@ -20,7 +20,6 @@ namespace ChessApi
 
         protected override async void OnAppearing()
         {
-            //Conecting
             base.OnAppearing();
             var result = await App.RestApiService.GetUserProfileAsync("");
             var statResult = await App.RestApiService.GetStatsAsync("");
